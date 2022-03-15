@@ -1,0 +1,79 @@
+@import '../../index.scss';
+
+$pink: #B498A7;
+$light: #D0CECF;
+$dark: #333;
+
+.header {
+    position: relative;
+    z-index: 1;
+    min-height: 40rem;
+    display: flex;
+    align-items: center;
+    background-color: $pink;
+
+    &::before {
+        position: absolute;
+        top: 0; bottom: 0; left: 30%;
+        z-index: 0;
+        content: '';
+        width: 10rem;
+        background-color: $light;
+    }
+
+    & > * {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.content {
+    height: max;
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:first-child {
+        margin: { left: 7.5rem; };
+    }
+
+    &:last-child {
+        margin: { left: 20rem; };
+    }
+}
+
+.image {
+    width: 25rem;
+
+    & > img {
+        width: 100%;
+        objecti-fit: contain;
+    }
+}
+
+h1 {
+    max-width: 30rem;
+    margin: { top: 0; bottom: 1rem; }
+    font-size: 3rem;
+    color: $dark;
+    text-align: center;
+}
+
+p {
+    max-width: 30rem;
+    margin: { bottom: 1rem; }
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: $dark;
+    text-align: center;
+
+    &:last-child {
+        margin: { bottom: 0; }
+    }
+}
+
