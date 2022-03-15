@@ -14,7 +14,7 @@ $dark: #333;
 
     &::before {
         position: absolute;
-        top: 0; bottom: 0; left: 30%;
+        top: 0; bottom: 0; left: 35%;
         z-index: 0;
         content: '';
         width: 10rem;
@@ -29,7 +29,8 @@ $dark: #333;
 
 .content {
     height: max;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .wrapper {
@@ -37,14 +38,6 @@ $dark: #333;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    &:first-child {
-        margin: { left: 7.5rem; };
-    }
-
-    &:last-child {
-        margin: { left: 20rem; };
-    }
 }
 
 .image {
