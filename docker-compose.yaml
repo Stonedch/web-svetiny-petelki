@@ -1,6 +1,20 @@
 version: '3.3'
 
 services:
+
+    backend:
+        restart: unless-stopped
+        build:
+            context: .
+            dockerfile: ./docker/backend/Dockerfile
+        container_name: ${PROJECT_NAME}-backend
+        entrypoint: /usr/src/app/docker/backend/wsgi-entrypoint.sh
+        volumes:
+            - ./docker/:/usr/src/app/docker/
+            - ./backend/:/usr/src/app/backend/
+        env_file:
+            - ./.env
+
     nginx:
         restart: unless-stopped
         build:
@@ -11,6 +25,6 @@ services:
             - ${HOST_PORT}:80
         volumes:
             - ./docker/nginx/development/:/etc/nginx/conf.d/
-        env_file:
-            - ./.env
+        depends_on:
+            - backend
 
