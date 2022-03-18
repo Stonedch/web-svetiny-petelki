@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+    nginx:
+        restart: unless-stopped
+        build:
+            context: .
+            dockerfile: ./docker/nginx/Dockerfile
+        container_name: ${PROJECT_NAME}-nginx
+        ports:
+            - ${HOST_PORT}:80
+        volumes:
+            - ./docker/nginx/development/:/etc/nginx/conf.d/
+        env_file:
+            - ./.env
+
