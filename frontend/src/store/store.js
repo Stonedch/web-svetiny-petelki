@@ -22,7 +22,6 @@ export default class Store {
             const response = await AuthService.login(email, password);
             localStorage.setItem('access', response.data.access);
             localStorage.setItem('refresh', response.data.access);
-            console.log(response.data);
             this.setAuth(true);
             this.setUser(response.data.user);
         } catch (e) {
@@ -35,7 +34,6 @@ export default class Store {
             const response = await AuthService.registration(email, username, password);
             localStorage.setItem('access', response.data.access);
             localStorage.setItem('refresh', response.data.access);
-            console.log(response.data);
             this.setAuth(true);
             this.setUser(response.data.user);
         } catch (e) {
