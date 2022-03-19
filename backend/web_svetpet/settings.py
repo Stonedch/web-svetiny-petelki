@@ -101,6 +101,8 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': True,
 }
 
+ROOT_URLCONF = 'web_svetpet.urls'
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
