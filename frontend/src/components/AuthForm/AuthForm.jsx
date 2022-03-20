@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
+import styles from './AuthForm.module.scss';
 import { Context } from '../../index';
 import { Input } from '../Input';
-import styles from './AuthForm.module.scss';
+import { Button } from '../Button';
 
 const AuthForm = () => {
     const [isLoginPage, setIsLoginPage] = useState(true);
@@ -10,6 +11,24 @@ const AuthForm = () => {
     const [password, setPassword] = useState('');
 
     const {store} = useContext(Context);
+
+    const loginButton = (
+        <Button
+            onClick={() => store.login(email, password)}
+            type="submit"
+        >
+            Войти
+        </Button>
+    );
+
+    const registrationButton = (
+        <Button
+            onClick={() => store.registration(email, username, password)}
+            type="submit"
+        >
+            Зарегистрироваться
+        </Button>
+    );
 
     return (
         <div className={styles.auth}>
@@ -54,12 +73,7 @@ const AuthForm = () => {
                     label="Пароль"
                 />
 
-                <button onClick={() => store.login(email, password)}>
-                    Login
-                </button>
-                <button onClick={() => store.registration(email, username, password)}>
-                    Registration
-                </button>
+                { isLoginPage ? loginButton : registrationButton }
             </div>
 
         </div>
