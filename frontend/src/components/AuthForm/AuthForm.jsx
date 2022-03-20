@@ -14,7 +14,7 @@ const AuthForm = () => {
 
     const loginButton = (
         <Button
-            onClick={() => store.login(email, password)}
+            onClick={() => store.login(email, password).then((response) => { if (response.status == 200) window.location.reload() })}
             type="submit"
         >
             Войти
@@ -23,7 +23,7 @@ const AuthForm = () => {
 
     const registrationButton = (
         <Button
-            onClick={() => store.registration(email, username, password)}
+            onClick={() => store.registration(email, username, password).then((response) => { if (response.status == 201) window.location.reload() })}
             type="submit"
         >
             Зарегистрироваться

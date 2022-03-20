@@ -23,7 +23,7 @@ const Navbar = () => {
     );
 
     const logout = (
-        <span className={styles.auth} onClick={() => store.logout()}>
+        <span className={styles.auth} onClick={() => { store.logout(); window.location.reload() }}>
             Выйти
         </span>
     );
@@ -52,7 +52,7 @@ const Navbar = () => {
                         <img src={phone} />
                         <a href="tel: +70000000000"> +7 (000) 000-00-00 </a>
                     </div>
-                    {store.isAuth ? logout : login}
+                    {localStorage.access ? logout : login}
                     <div className={styles.hamburger}>
                         <span></span>
                     </div>

@@ -24,6 +24,7 @@ export default class Store {
             localStorage.setItem('refresh', response.data.access);
             this.setAuth(true);
             this.setUser(response.data.user);
+            return response
         } catch (e) {
             console.error(e.response?.data?.message);
         }
@@ -36,6 +37,7 @@ export default class Store {
             localStorage.setItem('refresh', response.data.access);
             this.setAuth(true);
             this.setUser(response.data.user);
+            return response
         } catch (e) {
             console.error(e.response?.data?.message);
         }
