@@ -2,14 +2,13 @@
 
 .category {
     position: relative;
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin: 10rem; // DEBUG
 
     & > img {
         position:absolute;
@@ -18,6 +17,11 @@
         width: 100%;
         object-fit: contain;
         filter: brightness(.6);
+        transition: filter .5s;
+    }
+
+    &:hover > img {
+        filter: brightness(.8);
     }
 
     &__title {
@@ -27,6 +31,11 @@
         font-size: 1.5rem;
         font-weight: 700;
         color: $light;
+        transition: color .5s;
+    }
+
+    &:hover &__title {
+        color: white;
     }
 }
 
