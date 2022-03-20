@@ -22,6 +22,19 @@
         position: relative;
         z-index: 1;
     }
+
+    &__par {
+        max-width: 30rem;
+        margin: { bottom: 1rem; }
+        font-size: 1.2rem;
+        line-height: 1.4;
+        color: $dark;
+        text-align: center;
+
+        &:last-child {
+            margin: { bottom: 0; }
+        }
+    }
 }
 
 .content {
@@ -52,18 +65,5 @@ h1 {
     font-size: 3rem;
     color: $dark;
     text-align: center;
-}
-
-p {
-    max-width: 30rem;
-    margin: { bottom: 1rem; }
-    font-size: 1.2rem;
-    line-height: 1.4;
-    color: $dark;
-    text-align: center;
-
-    &:last-child {
-        margin: { bottom: 0; }
-    }
 }
 
