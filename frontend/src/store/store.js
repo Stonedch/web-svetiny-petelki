@@ -40,5 +40,12 @@ export default class Store {
             console.error(e.response?.data?.message);
         }
     }
+
+    async logout() {
+        localStorage.removeItem('access');
+        localStorage.removeItem('refresh');
+        this.setAuth(false);
+        this.set();
+    }
 }
 
