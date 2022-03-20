@@ -9,6 +9,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: filter .5s;
+
+    &:hover {
+        filter: drop-shadow(0 0 1rem $pink);
+    }
 
     & > img {
         position:absolute;
@@ -16,7 +22,7 @@
         z-index: 1;
         width: 100%;
         object-fit: contain;
-        filter: brightness(.6);
+        filter: brightness(.75);
         transition: filter .5s;
     }
 
