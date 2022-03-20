@@ -1,0 +1,56 @@
+@import '../../index.scss';
+
+.auth {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__switchers {
+        width: 100%;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: space-around
+    }
+
+    &__switcher {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $dark;
+        cursor: pointer;
+
+        &.active {
+            color: $pink;
+            text-decoration: underline;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        margin: { left: auto; right: auto; };
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > * {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__input {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+

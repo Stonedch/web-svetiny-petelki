@@ -1,3 +1,8 @@
+import React, { useState } from 'react';
+
+import { ModalWindow } from '../ModalWindow';
+import { AuthForm } from '../AuthForm';
+
 import styles from './Navbar.module.scss';
 import img from '../../assets/images/Logo.svg';
 import facebook from '../../assets/images/Facebook.svg';
@@ -6,6 +11,8 @@ import whatsapp from '../../assets/images/WhatsApp.svg';
 import phone from '../../assets/images/Phone.svg';
 
 const Navbar = () => {
+    const [modalActive, setModalActive] = useState();
+
     return (
         <div className={styles.component}>
             <div className={styles.content}>
@@ -30,11 +37,17 @@ const Navbar = () => {
                         <img src={phone} />
                         <a href="tel: +70000000000"> +7 (000) 000-00-00 </a>
                     </div>
+                    <span className={styles.auth} onClick={() => setModalActive(true)}>
+                        Войти
+                    </span>
                     <div className={styles.hamburger}>
                         <span></span>
                     </div>
                 </div>
             </div>
+            <ModalWindow active={modalActive} setActive={setModalActive}>
+                <AuthForm />
+            </ModalWindow>
         </div>
     );
 }
