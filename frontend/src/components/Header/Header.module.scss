@@ -6,17 +6,7 @@
     z-index: 1;
     min-height: 40rem;
     display: flex;
-    align-items: center;
     background-color: $pink;
-
-    &::before {
-        position: absolute;
-        top: 0; bottom: 0; left: 35%;
-        z-index: 0;
-        content: '';
-        width: 10rem;
-        background-color: $light;
-    }
 
     & > * {
         position: relative;
@@ -38,7 +28,7 @@
 }
 
 .content {
-    height: max;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -48,6 +38,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    &:first-child::before {
+        position: absolute;
+        top: 0; bottom: 0; left: 32%;
+        z-index: -1;
+        content: '';
+        width: 10rem;
+        background-color: $light;
+    }
 }
 
 .image {
