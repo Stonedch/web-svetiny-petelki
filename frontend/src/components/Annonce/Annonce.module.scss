@@ -1,10 +1,6 @@
 @import '../../index.scss';
 
 .annonce {
-    padding: {
-        top: 5rem;
-        bottom: 5rem;
-    }
     background-color: $light;
 
     & > .content {
