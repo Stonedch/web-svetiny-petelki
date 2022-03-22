@@ -8,11 +8,7 @@ from rest_framework_simplejwt.exceptions import TokenError, InvalidToken
 
 from products.models import Product
 from products.serializers import ProductSerializer
-
-
-class ReadOnly(BasePermission):
-    def has_permission(self, request, view):
-        return request.method in SAFE_METHODS
+from products.permissions import ReadOnly
 
 
 class ProductViewSet(ModelViewSet):
