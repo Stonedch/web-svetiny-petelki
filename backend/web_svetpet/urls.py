@@ -4,11 +4,13 @@ from rest_framework import routers
 
 from users.urls import router as users_router
 from authentication.urls import router as authentication_router
+from products.urls import router as products_router
 
 router = routers.DefaultRouter()
 
 router.registry.extend(users_router.registry)
 router.registry.extend(authentication_router.registry)
+router.registry.extend(products_router.registry)
 
 urlpatterns = [
     path('api/', include([
