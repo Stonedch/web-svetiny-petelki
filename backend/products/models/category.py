@@ -8,5 +8,5 @@ class Category(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.email}"
+        return f"{self.name}"
 
