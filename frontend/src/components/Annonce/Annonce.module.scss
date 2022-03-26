@@ -1,0 +1,84 @@
+@import '../../index.scss';
+
+.annonce {
+    background-color: $light;
+
+    & > .content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        &_reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__column {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+    }
+
+    &__title {
+        margin: {
+            top: 0;
+            bottom: 1rem;
+        };
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.25;
+        text-align: start;
+        color: $dark;
+    }
+
+    &__subtitle {
+        margin: {
+            top: 0;
+            bottom: 1rem;
+        };
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.25;
+        text-align: start;
+        color: $dark;
+    }
+
+    &__par {
+        margin: {
+            top: 0;
+            bottom: 0;
+        };
+        font-size: 1rem;
+        line-height: 1.25;
+        text-align: start;
+        color: $dark;
+    }
+
+    &__picture {
+        position: relative;
+        width: 60%;
+        margin: auto;
+
+        &::before {
+            position: absolute;
+            top: 0; right: 0;
+            content: '';
+            width: 100%; height: 100%;
+            margin: {
+                top: -1rem;
+                right: -1rem;
+            }
+            background-color: $pink;
+        }
+
+        & > img {
+            position: relative;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+

@@ -18,8 +18,15 @@ code {
 }
 
 .content {
-    width: 1580px;
+    width: 75rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+.screen {
+    padding: {
+        top: 3rem;
+        bottom: 3rem;
+    }
 }
 

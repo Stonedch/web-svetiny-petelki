@@ -1,0 +1,47 @@
+@import '../../index.scss';
+
+.category {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: filter .5s;
+
+    &:hover {
+        filter: drop-shadow(0 0 1rem $pink);
+    }
+
+    & > img {
+        position:absolute;
+        top: 0; left: 0;
+        z-index: 1;
+        width: 100%;
+        object-fit: contain;
+        filter: brightness(.75);
+        transition: filter .5s;
+    }
+
+    &:hover > img {
+        filter: brightness(.8);
+    }
+
+    &__title {
+        position: relative;
+        z-index: 2;
+        margin: auto;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $light;
+        transition: color .5s;
+    }
+
+    &:hover &__title {
+        color: white;
+    }
+}
+

@@ -1,3 +1,9 @@
+import React, { useState, useContext } from 'react';
+
+import { Context } from '../../index';
+import { ModalWindow } from '../ModalWindow';
+import { AuthForm } from '../AuthForm';
+
 import styles from './Navbar.module.scss';
 import img from '../../assets/images/Logo.svg';
 import facebook from '../../assets/images/Facebook.svg';
@@ -6,6 +12,22 @@ import whatsapp from '../../assets/images/WhatsApp.svg';
 import phone from '../../assets/images/Phone.svg';
 
 const Navbar = () => {
+    const [modalActive, setModalActive] = useState();
+    const {store} = useContext(Context);
+    console.warn(store.isAuth);
+
+    const login = (
+        <span className={styles.auth} onClick={() => setModalActive(true)}>
+            Войти
+        </span>
+    );
+
+    const logout = (
+        <span className={styles.auth} onClick={() => { store.logout(); window.location.reload() }}>
+            Выйти
+        </span>
+    );
+
     return (
         <div className={styles.component}>
             <div className={styles.content}>
@@ -30,11 +52,15 @@ const Navbar = () => {
                         <img src={phone} />
                         <a href="tel: +70000000000"> +7 (000) 000-00-00 </a>
                     </div>
+                    {localStorage.access ? logout : login}
                     <div className={styles.hamburger}>
                         <span></span>
                     </div>
                 </div>
             </div>
+            <ModalWindow active={modalActive} setActive={setModalActive}>
+                <AuthForm />
+            </ModalWindow>
         </div>
     );
 }

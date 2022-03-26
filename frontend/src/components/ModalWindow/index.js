@@ -1,0 +1,2 @@
+export { ModalWindow } from './ModalWindow';
+

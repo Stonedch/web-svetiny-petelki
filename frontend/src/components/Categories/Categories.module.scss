@@ -1,0 +1,16 @@
+@import '../../index.scss';
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 2rem;
+    align-items: center;
+
+    & > * {
+        margin: {
+            left: auto;
+            right: auto;
+        }
+    }
+}
+
