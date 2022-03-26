@@ -1,8 +1,7 @@
 import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './components/App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 import Store from './store/store';
 
 const store = new Store();
@@ -14,11 +13,10 @@ export const Context = createContext({
 ReactDOM.render(
     <Context.Provider value={{ store }}>
         <React.StrictMode>
-            <App />
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
         </React.StrictMode>
     </Context.Provider>,
     document.getElementById('root')
 );
-
-reportWebVitals();
-
