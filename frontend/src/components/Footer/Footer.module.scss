@@ -1,44 +1,68 @@
+@import '../../index.scss';
 
-.footer{
-    background-color: #362D32;
-}
-.footer h1{
-    color:white;
-}
-.lineBox{
-    display: flex;
-    justify-content: center;
-    & > .line{
-        width: 50%;
-        border-bottom: 0.1rem solid #ffffff;
+.footer {
+    padding: 2rem 0;
+    background-color: $dark;
+
+    & > .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & > * {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
-.massageBox{
+
+.lineBox {
+    display: flex;
+    justify-content: center;
+
+    & > .line {
+        width: 50%;
+        border-bottom: 0.1rem solid $light;
+    }
+}
+
+.massageBox {
     display: flex;
     justify-content: center;
 
     & > img {
         width: 3rem;
     }
-    & > a{
-        margin: 1rem 1rem 0.5rem 0rem;
-    }
-    & > *:first-child{
-        margin: {left: 0;}
+
+    & > * {
+        margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0rem;
+        }
     }
 }
-.menu{
+
+.menu {
     display: flex;
     justify-content: center;
-    & > a{
-        margin: 0.5rem 1rem 0.5rem 0rem;
-    }
-    & > *:first-child{
-        margin: {left: 0};
+
+    & > * {
+        margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0rem;
+        }
     }
 }
-.сopyright{
+
+.сopyright {
     font-family: 'Ubuntu';
-    font-size: 1rem;
-    line-height: 1.25;
+    font-size: .75rem;
+    line-height: 1.25em;
+    text-align: center;
 }
+
