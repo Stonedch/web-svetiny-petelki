@@ -15,4 +15,9 @@ class CommentSerializer(serializers.ModelSerializer):
             'created',
             'updated',
         ]
+        read_only_fields = [
+            'author',
+            'created',
+            'updated',
+        ]
 
