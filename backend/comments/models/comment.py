@@ -21,6 +21,7 @@ class Comment(models.Model):
     )
     rating = models.IntegerField(blank=True, null=True)
     body = models.TextField(max_length=512)
+    active = models.BooleanField(default=False, blank=False, null=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

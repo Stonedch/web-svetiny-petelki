@@ -12,6 +12,7 @@ class CommentSerializer(serializers.ModelSerializer):
             'product',
             'rating',
             'body',
+            'active',
             'created',
             'updated',
         ]
