@@ -7,6 +7,7 @@ import { Header } from '../Header';
 import { Navbar } from '../Navbar';
 import { Annonce } from '../Annonce';
 import { Categories } from '../Categories';
+import { Footer } from '../Footer';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
                 reverse={true}
                 picture={image}
             />
+            <Footer />
         </div>
     );
 }

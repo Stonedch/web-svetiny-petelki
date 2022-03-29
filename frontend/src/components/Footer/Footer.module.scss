@@ -1,0 +1,44 @@
+
+.footer{
+    background-color: #362D32;
+}
+.footer h1{
+    color:white;
+}
+.lineBox{
+    display: flex;
+    justify-content: center;
+    & > .line{
+        width: 50%;
+        border-bottom: 0.1rem solid #ffffff;
+    }
+}
+.massageBox{
+    display: flex;
+    justify-content: center;
+
+    & > img {
+        width: 3rem;
+    }
+    & > a{
+        margin: 1rem 1rem 0.5rem 0rem;
+    }
+    & > *:first-child{
+        margin: {left: 0;}
+    }
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    & > a{
+        margin: 0.5rem 1rem 0.5rem 0rem;
+    }
+    & > *:first-child{
+        margin: {left: 0};
+    }
+}
+.сopyright{
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    line-height: 1.25;
+}
