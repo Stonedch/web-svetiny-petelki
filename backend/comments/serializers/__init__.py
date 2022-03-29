@@ -1,2 +1,3 @@
-from .comment import CommentSerializer
+from .comment import ForAdminSerializer
+from .comment import ForUserSerializer
 
