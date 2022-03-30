@@ -3,6 +3,8 @@ import { Header } from '../components/Header';
 import { Navbar } from '../components/Navbar';
 import { Annonce } from '../components/Annonce';
 import { Categories } from '../components/Categories';
+import { QA } from '../components/QA';
+
 
 const Home = () => {
     return (
@@ -23,6 +25,8 @@ const Home = () => {
                 reverse={true}
                 picture={image}
             />
+            <QA/>
+            
         </>
     );
 }

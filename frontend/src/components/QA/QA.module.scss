@@ -1,0 +1,24 @@
+@import '../../index.scss';
+.content{
+    margin-top: 2rem;
+    background-color: bisque;
+    display: block;   
+}
+.block{
+    background-color: #D6D6D6;
+    margin: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    
+}
+.name a {
+    color: black;
+    font-size: 2rem;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+}
+
