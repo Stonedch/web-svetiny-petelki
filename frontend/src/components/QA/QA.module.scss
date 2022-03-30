@@ -1,24 +1,61 @@
 @import '../../index.scss';
-.content{
-    margin-top: 2rem;
-    background-color: bisque;
-    display: block;   
+
+.qa {
+    & > * {
+        margin: 0 auto;
+        width: 80%;
+    }
 }
-.block{
-    background-color: #D6D6D6;
-    margin: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    height: 5rem;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    
-}
-.name a {
-    color: black;
-    font-size: 2rem;
-    font-family: 'Ubuntu';
-    font-weight: 400;
+
+.question {
+    border-bottom: .1rem solid $pink;
+
+    & > * {
+        padding: 1.5rem 2rem;
+        background-color: $light;
+    }
+
+    &.active {
+        .question__header > img {
+            transform: rotate(45deg);
+        }
+
+        .question__body {
+            display: block;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > span {
+            font-size: 1rem;
+            font-weight: 600;
+            color: $dark;
+        }
+
+        & > img {
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+            transition: transform .5;
+        }
+    }
+
+    &__body {
+        display: none;
+
+        & > p {
+            font-size: 1rem;
+            color: $dark;
+            line-height: 1.50em;
+        }
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
 
