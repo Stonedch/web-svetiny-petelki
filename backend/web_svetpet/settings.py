@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'products',
     'questions',
     'comments',
+    'settings',
 ]
 
 MIDDLEWARE = [
