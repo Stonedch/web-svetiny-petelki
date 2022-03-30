@@ -8,6 +8,7 @@ from users.urls import router as users_router
 from authentication.urls import router as authentication_router
 from products.urls import router as products_router
 from questions.urls import router as questions_router
+from comments.urls import router as comments_router
 
 router = routers.DefaultRouter()
 
@@ -15,6 +16,7 @@ router.registry.extend(users_router.registry)
 router.registry.extend(authentication_router.registry)
 router.registry.extend(products_router.registry)
 router.registry.extend(questions_router.registry)
+router.registry.extend(comments_router.registry)
 
 urlpatterns = [
     path('api/', include([
