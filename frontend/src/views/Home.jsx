@@ -3,7 +3,9 @@ import { Header } from '../components/Header';
 import { Navbar } from '../components/Navbar';
 import { Annonce } from '../components/Annonce';
 import { Categories } from '../components/Categories';
-import { QA } from '../components/QA';
+//import { QA } from '../components/Question';
+import { Questions } from '../components/Questions';
+
 
 
 const Home = () => {
@@ -25,8 +27,7 @@ const Home = () => {
                 reverse={true}
                 picture={image}
             />
-            <QA/>
-            
+            <Questions/>
         </>
     );
 }

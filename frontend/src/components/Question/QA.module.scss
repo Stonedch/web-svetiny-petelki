@@ -1,22 +1,18 @@
 @import '../../index.scss';
 
 .qa {
-    & > * {
-        margin: 0 auto;
-        width: 80%;
-    }
+    margin: 0 auto;
+    width: 80%;
 }
 
 .question {
-    border-bottom: .1rem solid $pink;
-
-    & > * {
-        padding: 1.5rem 2rem;
+    &>* {
+        padding: 1rem 2rem;
         background-color: rgba($pink, .1);
     }
 
     &.active {
-        .question__header > img {
+        .question__header>img {
             transform: rotate(45deg);
         }
 
@@ -30,13 +26,13 @@
         justify-content: space-between;
         align-items: center;
 
-        & > span {
+        &>span {
             font-size: 1rem;
             font-weight: 600;
             color: $dark;
         }
 
-        & > img {
+        &>img {
             width: 2rem;
             height: 2rem;
             cursor: pointer;
@@ -47,15 +43,11 @@
     &__body {
         display: none;
 
-        & > p {
+        &>p {
             font-size: 1rem;
             color: $dark;
             line-height: 1.50em;
         }
-    }
-
-    &:last-child {
-        border-bottom: none;
     }
 }
 
