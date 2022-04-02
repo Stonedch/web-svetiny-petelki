@@ -9,11 +9,10 @@ from products.permissions import ReadOnly
 
 class SettingsViewSet(ViewSet):
     serializer_class = SettingsSerializer
-    queryset = Settings.load()
     permission_classes = (IsAdminUser|ReadOnly, )
-    from rest_framework.permissions import AllowAny; permission_classes = (AllowAny, ) # DEBUG
 
     def list(self, request):
-        serializer = self.serializer_class(self.queryset, many=False)
+        settings = Settings.load()
+        serializer = self.serializer_class(settings, many=False)
         return Response(serializer.data)
 

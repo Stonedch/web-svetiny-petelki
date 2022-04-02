@@ -7,13 +7,14 @@ class SingletonModel(models.Model):
         abstract = True
 
     def save(self, *args, **kwargs):
-        self.__class__.objects.exclude(id=self.id).delete()
+        self.pk = 1
         super(SingletonModel, self).save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        pass
 
     @classmethod
     def load(cls):
-        try:
-            return cls.objects.get()
-        except cls.DoesNotExist:
-            return cls()
+        obj, created = cls.objects.get_or_create(pk=1)
+        return obj
 
