@@ -7,7 +7,7 @@ class SingletonModel(models.Model):
         abstract = True
 
     def save(self, *args, **kwargs):
-        self.pk = 1
+        self.__class__.objects.exclude(id=self.id).delete()
         super(SingletonModel, self).save(*args, **kwargs)
 
     def delete(self, *args, **kwargs):
