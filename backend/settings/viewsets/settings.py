@@ -16,16 +16,16 @@ class SettingsViewSet(ViewSet):
     permission_classes = (IsAdminUser|ReadOnly, )
 
     def list(self, request):
-        settings = Settings.load()
-        serializer = self.serializer_class(settings, many=False)
+        queryset = Settings.objects.first()
+        serializer = self.serializer_class(queryset, many=False)
         return Response(serializer.data)
 
     def create(self, request):
+        queryset = Settings.objects.first()
         serializer = self.serializer_class(data=request.data, partial=True)
-        settings = Settings.load()
 
         if serializer.is_valid():
-            serializer.update(settings, serializer.validated_data)
+            serializer.update(queryset, serializer.validated_data)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

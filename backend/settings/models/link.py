@@ -10,7 +10,7 @@ class Link(models.Model):
         related_name='links',
         on_delete=models.CASCADE,
         blank=False, null=False,
-        default=Settings.load().id
+        default=1
     )
 
     def __str__(self):
