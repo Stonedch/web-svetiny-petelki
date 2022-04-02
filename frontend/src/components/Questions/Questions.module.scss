@@ -1,0 +1,12 @@
+@import '../../index.scss';
+
+.components {
+    & > * {
+        border-bottom: .1rem solid $pink;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+

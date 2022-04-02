@@ -6,6 +6,7 @@ import { Navbar } from '../components/Navbar';
 import { Annonce } from '../components/Annonce';
 import { Categories } from '../components/Categories';
 import { Footer } from '../components/Footer';
+import { Questions } from '../components/Questions';
 
 const Home = () => {
     return (
@@ -26,6 +27,7 @@ const Home = () => {
                 reverse={true}
                 picture={image}
             />
+            <Questions/>
             <Footer />
         </>
     );

@@ -13,7 +13,7 @@ import phone from '../../assets/images/Phone.svg';
 
 const Navbar = () => {
     const [modalActive, setModalActive] = useState();
-    const {store} = useContext(Context);
+    const { store } = useContext(Context);
     console.warn(store.isAuth);
 
     const login = (
