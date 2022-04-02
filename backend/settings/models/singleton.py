@@ -14,3 +14,8 @@ class SingletonModel(models.Model):
     def delete(self, *args, **kwargs):
         pass
 
+    @classmethod
+    def load(cls):
+        obj, created = cls.objects.get_or_create(pk=1)
+        return obj
+

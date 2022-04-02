@@ -16,12 +16,12 @@ class SettingsViewSet(ViewSet):
     permission_classes = (IsAdminUser|ReadOnly, )
 
     def list(self, request):
-        queryset = Settings.objects.first()
+        queryset = Settings.load()
         serializer = self.serializer_class(queryset, many=False)
         return Response(serializer.data)
 
     def create(self, request):
-        queryset = Settings.objects.first()
+        queryset = Settings.load()
         serializer = self.serializer_class(data=request.data, partial=True)
 
         if serializer.is_valid():
