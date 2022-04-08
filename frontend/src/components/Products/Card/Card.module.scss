@@ -1,0 +1,65 @@
+@import '../../../index.scss';
+
+.card {
+    position: relative;
+    border-radius: .3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(black, .12), 0 1px 2px rgba(black, .24);
+
+    & > * {
+        width: 100%;
+        margin: {
+            bottom: 1rem,
+        }
+        text-align: center;
+
+        &:last-child {
+            margin: {
+                bottom: 0,
+            }
+        }
+    }
+
+    & .image {
+        width: 90%; height: 50%;
+        border-radius: .3rem;
+        transition: transform .2s ease-in-out;
+        margin: {
+            bottom: 1.5rem,
+        }
+
+        &:hover {
+            transform: translate(-50%);
+        }
+    }
+
+    & .title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $dark;
+    }
+
+    & .body {
+        border: {
+            bottom: .1rem solid $dark,
+        }
+        padding: {
+            bottom: 1rem,
+        }
+        font-size: 1rem;
+        font-weight: 400;
+        color: $dark;
+    }
+
+    & .price {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $dark;
+    }
+}
+
