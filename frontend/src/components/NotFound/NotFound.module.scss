@@ -1,0 +1,16 @@
+@import '../../index.scss';
+
+
+.imgBlock{
+    margin: auto;
+    img {
+        display: flex;
+        margin: auto;
+    }
+}
+h1 {
+    max-width: none;
+}
+h2 {
+    text-align: center;
+}
