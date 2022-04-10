@@ -1,3 +1,4 @@
+from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
@@ -21,6 +22,7 @@ router.registry.extend(comments_router.registry)
 router.registry.extend(settings_router.registry)
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('api/', include([
         path('v1/', include([
             path('', include(router.urls), name='router'),
