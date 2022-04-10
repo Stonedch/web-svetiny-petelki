@@ -1,0 +1,27 @@
+@import '../../index.scss';
+
+.notfound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > .image {
+        display: block;
+        width: 20rem;
+
+        & > img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    & > h2, h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+}
+

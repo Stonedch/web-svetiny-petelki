@@ -17,7 +17,8 @@ const Footer = () => {
                 <div className={styles.line}></div>
             </div>
             <div className={styles.menu}>
-                <a href='/'>Главная</a>
+                <a href="/home">Главная</a>
+                <a href="/categories"> Категории</a>
                 <a href='#'>Наборы</a>
                 <a href='#'>Именные игрушки</a>
                 <a href='#'>Контакты</a>

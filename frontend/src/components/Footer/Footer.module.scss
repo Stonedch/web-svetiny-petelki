@@ -1,7 +1,9 @@
 @import '../../index.scss';
 
 .footer {
+    margin-top: auto;
     padding: 2rem 0;
+    width: 100%;
     background-color: $dark;
 
     & > .content {
