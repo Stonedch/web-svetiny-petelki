@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_URL = 'http://localhost/api/v1/'
+export const API_URL = 'http://stch.online/api/v1/'
 
 const api = axios.create({
     withCredentionals: true,

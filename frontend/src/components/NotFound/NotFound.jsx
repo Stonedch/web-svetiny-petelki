@@ -4,14 +4,13 @@ import styles from "./NotFound.module.scss";
 
 export const NotFound = () => {
   return (
-    <div>
-      <h1> Error 404!</h1>
-      <h2> Вы что-то сломали. Поздравляю вас. Теперь опять все чинить...</h2>
-      <div className={styles.imgBlock}>
-        <a href="#">
-          <img src={FailImg} />
-        </a>
+    <div className={[styles.notfound, styles.content, styles.screen].join(' ')}>
+      <h2>Ошибка 404!</h2>
+      <h3>Вы что-то сломали. Поздравляю вас. Теперь опять все чинить...</h3>
+      <div className={styles.image}>
+        <img src={FailImg} />
       </div>
     </div>
   );
 };
+
