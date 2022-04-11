@@ -25,12 +25,23 @@
             margin: { bottom: 0; }
         }
     }
+
+    @media screen and (max-width: 699px) {
+        padding: {
+            top: 1rem;
+            bottom: 1rem;
+        }
+    }
 }
 
 .content {
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 699px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .wrapper {
@@ -46,6 +57,10 @@
         content: '';
         width: 10rem;
         background-color: $light;
+
+        @media screen and (max-width: 699px) {
+            display: none;
+        }
     }
 }
 
@@ -55,6 +70,14 @@
     & > img {
         width: 100%;
         objecti-fit: contain;
+    }
+
+    @media screen and (max-width: 1279px) {
+        width: 80%
+    }
+
+    @media screen and (max-width: 699px) {
+        width: 40%;
     }
 }
 
