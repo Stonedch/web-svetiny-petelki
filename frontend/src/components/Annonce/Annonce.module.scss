@@ -11,6 +11,16 @@
 
         &_reverse {
             flex-direction: row-reverse;
+
+            @media screen and (max-width: 699px) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 699px) {
+            display: flex;
+            flex-direction: column-reverse;
         }
     }
 
@@ -20,6 +30,15 @@
         flex-direction: column;
         justify-content: center;
         text-align: start;
+
+        @media screen and (max-width: 899px) {
+            width: 48%;
+        }
+
+        @media screen and (max-width: 699px) {
+            width: 100%;
+            align-items: center;
+        }
     }
 
     &__title {
@@ -32,6 +51,10 @@
         line-height: 1.25;
         text-align: start;
         color: $dark;
+
+        @media screen and (max-width: 699px) {
+            text-align: center;
+        }
     }
 
     &__subtitle {
@@ -44,6 +67,10 @@
         line-height: 1.25;
         text-align: start;
         color: $dark;
+
+        @media screen and (max-width: 699px) {
+            text-align: center;
+        }
     }
 
     &__par {
@@ -55,6 +82,10 @@
         line-height: 1.25;
         text-align: start;
         color: $dark;
+
+        @media screen and (max-width: 699px) {
+            text-align: center;
+        }
     }
 
     &__picture {
@@ -78,6 +109,11 @@
             position: relative;
             width: 100%;
             object-fit: contain;
+        }
+
+        @media screen and (max-width: 699px) {
+            width: 40%;
+            margin-bottom: 1rem;
         }
     }
 }

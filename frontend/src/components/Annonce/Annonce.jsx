@@ -4,8 +4,8 @@ const Annonce = (props) => {
     const {title, subtitle, body, picture, reverse=false} = props
 
     return (
-        <div className={styles.annonce}>
-            <div className={reverse ? [styles.content, styles.screen, styles.content_reverse].join(' ') : [styles.content, styles.screen].join(' ')}>
+        <div className={[styles.annonce, styles.screen].join(' ')}>
+            <div className={reverse ? [styles.content, styles.content_reverse].join(' ') : [styles.content, styles.screen].join(' ')}>
                 <div className={styles.annonce__column}>
                     <h2 className={styles.annonce__title}>{title}</h2>
                     <h3 className={styles.annonce__subtitle}>{subtitle}</h3>
