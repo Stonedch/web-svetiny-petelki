@@ -59,6 +59,10 @@
             margin-right: 0rem;
         }
     }
+
+    @media screen and (max-width: 899px) {
+        display: none;
+    }
 }
 
 .сopyright {
