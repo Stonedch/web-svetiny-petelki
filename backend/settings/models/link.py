@@ -3,8 +3,8 @@ from django.db import models
 from .settings import Settings
 
 class Link(models.Model):
-    name = models.TextField(max_length=256, blank=False, null=False)
-    url = models.URLField(max_length=256, blank=False, null=False)
+    name = models.CharField(max_length=256, blank=False, null=False)
+    url = models.CharField(max_length=256, blank=False, null=False)
     settings = models.ForeignKey(
         Settings,
         related_name='links',
@@ -14,5 +14,5 @@ class Link(models.Model):
     )
 
     def __str__(self):
-        return f'{name}: {url}'
+        return f'{self.name}: {self.url}'
 
