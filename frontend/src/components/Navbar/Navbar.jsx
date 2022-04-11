@@ -1,9 +1,9 @@
-import React, { useState, useContext } from 'react';
-
+import React, { useState, useContext, useEffect } from 'react';
+import { API_URL } from '../../http';
+import { Link } from 'react-router-dom';
 import { Context } from '../../index';
 import { ModalWindow } from '../ModalWindow';
 import { AuthForm } from '../AuthForm';
-
 import styles from './Navbar.module.scss';
 import img from '../../assets/images/Logo.svg';
 import facebook from '../../assets/images/Facebook.svg';
@@ -13,8 +13,15 @@ import phone from '../../assets/images/Phone.svg';
 
 const Navbar = () => {
     const [modalActive, setModalActive] = useState();
+    const [ data, setData ] = useState(null);
     const { store } = useContext(Context);
     console.warn(store.isAuth);
+
+    useEffect(() => {
+        fetch(API_URL + 'settings/navbar/')
+            .then(response => response.json())
+            .then(response => setData(response.results));
+    }, []);
 
     const login = (
         <span className={styles.auth} onClick={() => setModalActive(true)}>
@@ -28,6 +35,12 @@ const Navbar = () => {
         </span>
     );
 
+    const navbar = data ? (
+        <>
+            {data.map((item)=> <Link to={item.url}>{item.name}</Link>)}
+        </>
+    ) : null;
+
     return (
         <div className={styles.component}>
             <div className={styles.content}>
@@ -36,11 +49,7 @@ const Navbar = () => {
                         <img src={img} />
                     </a>
                     <div className={styles.menu}>
-                        <a href="/home">Главная</a>
-                        <a href="/categories"> Категории</a>
-                        <a href="#">Наборы</a>
-                        <a href="#">Именные игрушки</a>
-                        <a href="#">Контакты</a>
+                        {navbar}
                     </div>
                 </div>
                 <div className={styles.section}>
