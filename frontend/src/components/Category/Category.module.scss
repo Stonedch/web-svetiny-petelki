@@ -44,5 +44,15 @@
     &:hover &__title {
         color: white;
     }
+
+    @media screen and (max-width: 1279px) {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    @media screen and (max-width: 699px) {
+        width: 6rem;
+        height: 6rem;
+    }
 }
 

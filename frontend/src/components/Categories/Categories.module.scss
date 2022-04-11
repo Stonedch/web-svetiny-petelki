@@ -5,13 +5,16 @@
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 2rem;
     align-items: center;
-    
 
     & > * {
         margin: {
             left: auto;
             right: auto;
         }
+    }
+
+    @media screen and (max-width: 899px) {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
