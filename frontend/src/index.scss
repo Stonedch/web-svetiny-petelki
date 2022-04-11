@@ -31,6 +31,14 @@ code {
     width: 75rem;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (max-width: 1279px) {
+        width: 800px;
+    }
+
+    @media screen and (max-width: 899px) {
+        width: calc(100% - 1.2rem);
+    }
 }
 
 .screen {
