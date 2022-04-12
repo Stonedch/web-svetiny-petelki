@@ -1,4 +1,4 @@
-import { Navbar } from '../components/Navbar';
+import { Navbar } from 'components/Header/Navbar';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Products } from '../components/Products';
