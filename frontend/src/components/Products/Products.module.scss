@@ -1,0 +1,27 @@
+@import '../../index.scss';
+
+.products {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & > * {
+        width: calc(25% - 1rem);
+        height: 30rem;
+        margin: {
+            top:1rem;
+            left: 1rem;
+        }
+
+        &:nth-child(-n + 4) {
+            margin-top:0
+        }
+
+        &:nth-child(4n + 1),
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
