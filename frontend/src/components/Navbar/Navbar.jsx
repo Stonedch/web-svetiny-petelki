@@ -1,4 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { API_URL } from '../../http';
+
 
 import { Context } from '../../index';
 import { ModalWindow } from '../ModalWindow';
@@ -10,11 +12,19 @@ import facebook from '../../assets/images/Facebook.svg';
 import instag from '../../assets/images/Instagram.svg';
 import whatsapp from '../../assets/images/WhatsApp.svg';
 import phone from '../../assets/images/Phone.svg';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [modalActive, setModalActive] = useState();
     const { store } = useContext(Context);
+    
+    const [data, setData] = useState(null);
     console.warn(store.isAuth);
+    useEffect(() => {
+        fetch(API_URL + 'settings/navbar/')
+            .then(response => response.json())
+            .then(response => setData(response.results));
+    }, []);
 
     const login = (
         <span className={styles.auth} onClick={() => setModalActive(true)}>
@@ -27,6 +37,12 @@ const Navbar = () => {
             Выйти
         </span>
     );
+    const navbar = data ? (
+        <>
+            {data.map((item)=> <Link to={item.url}>{item.name}</Link>)}
+        </>
+    ) : null;
+
 
     return (
         <div className={styles.component}>
@@ -36,11 +52,7 @@ const Navbar = () => {
                         <img src={img} />
                     </a>
                     <div className={styles.menu}>
-                        <a href="/home">Главная</a>
-                        <a href="/categories"> Категории</a>
-                        <a href="#">Наборы</a>
-                        <a href="#">Именные игрушки</a>
-                        <a href="#">Контакты</a>
+                        {navbar}
                     </div>
                 </div>
                 <div className={styles.section}>

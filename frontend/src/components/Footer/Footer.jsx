@@ -1,10 +1,27 @@
 import styles from './Footer.module.scss';
-import React from 'react';
 import facebook from '../../assets/images/Facebook.svg';
 import instag from '../../assets/images/Instagram.svg';
 import whatsapp from '../../assets/images/WhatsApp.svg';
 
+import { API_URL } from '../../http';
+import { Link } from 'react-router-dom';
+import React, { useState, useContext, useEffect } from 'react';
+
 const Footer = () => {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetch(API_URL + 'settings/navbar/')
+            .then(response => response.json())
+            .then(response => setData(response.results));
+    }, []);
+
+    const footer = data ? (
+        <>
+            {data.map((item)=> <Link to={item.url}>{item.name}</Link>)}
+        </>
+    ) : null;
+
   return (
     <div className={styles.footer}>
         <div className={styles.content}>
@@ -17,11 +34,7 @@ const Footer = () => {
                 <div className={styles.line}></div>
             </div>
             <div className={styles.menu}>
-                <a href="/home">Главная</a>
-                <a href="/categories"> Категории</a>
-                <a href='#'>Наборы</a>
-                <a href='#'>Именные игрушки</a>
-                <a href='#'>Контакты</a>
+                {footer}
             </div>
             <a href='#' className={styles.сopyright}>©2022 Svetenpetelki. All rights reserved</a>
         </div>
