@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Categories.module.scss';
-import { Category } from '../Category';
-import { API_URL } from '../../http';
+import { Category } from './Category';
+import { API_URL } from 'http';
 
 const Categories = () => {
     const [ data, setData ] = useState(null);

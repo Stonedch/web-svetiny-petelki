@@ -1,5 +1,5 @@
-import styles from './Category.module.scss';
 import { Link } from 'react-router-dom';
+import styles from './Category.module.scss';
 
 const Category = (props) => {
     const {title, picture} = props
