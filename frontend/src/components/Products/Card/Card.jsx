@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import styles from './Card.module.scss';
 
 const Card = (props) => {
-    const {title, picture, children} = props;
+    const {title, price, picture, children} = props;
 
     return (
         <div className={styles.card}>
@@ -14,7 +14,7 @@ const Card = (props) => {
                 <p className={styles.body}>{children}</p>
             ) : null}
             <div className={styles.bottom}>
-                <div className={styles.price}>2.000 р.</div>
+                <div className={styles.price}>{price} р.</div>
             </div>
         </div>
     );

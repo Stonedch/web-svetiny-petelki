@@ -21,7 +21,7 @@ const Products = (props) => {
 
     return data ? (
         <div className={[styles.products, styles.content, styles.screen].join(' ')}>
-            {data.map(product => <Card title={product.name} picture={product.picture}>{product.body}</Card>)}
+            {data.map(product => <Card title={product.name} price={product.price} picture={product.picture}>{product.body}</Card>)}
         </div>
     ) : null;
 }
