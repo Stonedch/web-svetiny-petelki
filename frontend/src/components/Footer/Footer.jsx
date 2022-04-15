@@ -1,8 +1,8 @@
 import styles from './Footer.module.scss';
 import React from 'react';
-import facebook from '../../assets/images/Facebook.svg';
-import instag from '../../assets/images/Instagram.svg';
-import whatsapp from '../../assets/images/WhatsApp.svg';
+import facebook from 'assets/images/Facebook.svg';
+import instag from 'assets/images/Instagram.svg';
+import whatsapp from 'assets/images/WhatsApp.svg';
 
 const Footer = () => {
   return (
