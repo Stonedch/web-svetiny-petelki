@@ -14,7 +14,7 @@ const Categories = () => {
 
     return data ? (
         <div className={[styles.categories, styles.content, styles.screen].join(' ')}>
-            {data.map(category => <Category title={category.name} picture={category.picture} />)}
+            {data.map(category => <Category id={category.id} title={category.name} picture={category.picture} />)}
         </div>
     ) : null;
 }

@@ -3,11 +3,18 @@ import styles from './Products.module.scss';
 import { Card } from './Card';
 import { API_URL } from '../../http';
 
-const Products = () => {
-    const [ data, setData] = useState(null);
+const Products = (props) => {
+    const { category } = props;
+    const [data, setData] = useState(null);
+
+    let endpoint = API_URL + 'products/';
+
+    if (category) {
+        endpoint += '?category=' + category;
+    }
 
     useEffect(() => {
-        fetch(API_URL + 'products/')
+        fetch(endpoint)
             .then(response => response.json())
             .then(response => setData(response.results));
     });
