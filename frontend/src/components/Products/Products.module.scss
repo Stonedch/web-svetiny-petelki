@@ -10,17 +10,33 @@
         width: calc(25% - 1rem);
         height: 30rem;
         margin: {
-            top:1rem;
             left: 1rem;
         }
 
-        &:nth-child(-n + 4) {
-            margin-top:0
+        &:nth-child(n + 5) {
+            margin-top: 1rem;
         }
 
         &:nth-child(4n + 1),
         &:first-child {
             margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 899px) {
+        & > * {
+            margin-left: .5rem;
+
+            width: calc(50% - .5rem);
+
+            &:nth-child(n + 3) {
+                margin-top: .5rem;
+            }
+
+            &:nth-child(2n + 1),
+            &:first-child {
+                margin-left: 0;
+            }
         }
     }
 }
