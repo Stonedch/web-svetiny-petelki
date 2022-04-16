@@ -1,12 +1,12 @@
-import logo from '../assets/logo.svg';
-import image from '../assets/images/header-image.png';
-import { Button } from '../components/Button';
-import { Header } from '../components/Header';
-import { Navbar } from "components/Header/Navbar";
-import { Annonce } from '../components/Annonce';
-import { Categories } from '../components/Categories';
-import { Footer } from '../components/Footer';
-import { Questions } from '../components/Questions';
+import logo from 'assets/logo.svg';
+import image from 'assets/images/header-image.png';
+import { Button } from 'components/Button';
+import { Header } from 'components/Header';
+import { Navbar } from 'components/Header/Navbar';
+import { Annonce } from 'components/Annonce';
+import { Categories } from 'components/Categories';
+import { Footer } from 'components/Footer';
+import { Questions } from 'components/Questions';
 
 const Home = () => {
     return (
@@ -34,3 +34,4 @@ const Home = () => {
 }
 
 export { Home };
+

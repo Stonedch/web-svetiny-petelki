@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
 import styles from './AuthForm.module.scss';
-import { Context } from '../../index';
-import { Input } from '../Input';
-import { Button } from '../Button';
+import { Context } from 'index';
+import { Input } from 'components/Input';
+import { Button } from 'components/Button';
 
 const AuthForm = () => {
     const [isLoginPage, setIsLoginPage] = useState(true);

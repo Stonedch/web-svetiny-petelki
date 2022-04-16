@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './QA.module.scss';
-import plus from '../../assets/images/Plus.svg';
+import plus from 'assets/images/Plus.svg';
 
 const QA = (props) => {
     const { title, children } = props;

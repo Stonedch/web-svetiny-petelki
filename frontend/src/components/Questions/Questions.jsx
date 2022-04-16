@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { QA } from '../Question';
+import { QA } from './Question';
 import styles from './Questions.module.scss';
-import { API_URL } from '../../http';
+import { API_URL } from 'http';
 
 const Questions = () => {
     const [ data, setData] = useState(null);

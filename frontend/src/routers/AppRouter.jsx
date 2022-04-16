@@ -1,10 +1,9 @@
 import { Routes, Route, Redirect } from 'react-router-dom';
-import { Home } from '../views/Home';
-import { CategoriesVi } from '../views/CategoriesVi';
-import { ProductsView } from '../views/ProductsView';
-import { routes } from '../constants';
+import { Home } from 'views/Home';
+import { CategoriesVi } from 'views/CategoriesVi';
+import { ProductsView } from 'views/ProductsView';
+import { routes } from 'constants';
 import { NotFond } from 'views/NotFond';
-
 
 const AppRouter = () => {
     return (
