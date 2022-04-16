@@ -72,6 +72,10 @@ a {
             margin: { left: 0; }
         }
     }
+
+    @media screen and (max-width: 899px) {
+        display: none;
+    }
 }
 
 .soc {
