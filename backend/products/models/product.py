@@ -5,13 +5,13 @@ from .category import Category
 
 class Product(models.Model):
     name = models.CharField(db_index=True, max_length=256, unique=True)
-    picture = models.ImageField(upload_to='products')
-    price = models.DecimalField(max_digits=5, decimal_places=2, null=False)
-    discount = models.DecimalField(max_digits=5, decimal_places=2)
-    status = models.CharField(max_length=256, null=False)
-    materials = models.TextField(max_length=512)
-    color = models.CharField(max_length=256)
-    sizes = models.TextField(max_length=512)
+    picture = models.ImageField(upload_to='products', blank=True, null=True)
+    price = models.FloatField(default=0, blank=False, null=False)
+    discount = models.FloatField(default=0, blank=False, null=False)
+    status = models.CharField(max_length=256, blank=True, null=True)
+    materials = models.TextField(max_length=512, blank=True, null=True)
+    color = models.CharField(max_length=256, blank=True, null=True)
+    sizes = models.TextField(max_length=512, blank=True, null=True)
     category = models.ForeignKey(
         Category,
         related_name='products',
