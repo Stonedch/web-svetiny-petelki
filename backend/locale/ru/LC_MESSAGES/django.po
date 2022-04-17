@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-17 12:24+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: products/models/category.py:6 products/models/product.py:8
+msgid "name"
+msgstr "Название"
+
+#: products/models/category.py:7 products/models/product.py:9
+msgid "picture"
+msgstr "Изображение"
+
+#: products/models/category.py:8 products/models/product.py:24
+msgid "created"
+msgstr "Добавлено"
+
+#: products/models/category.py:9 products/models/product.py:25
+msgid "updated"
+msgstr "Последнее обновление"
+
+#: products/models/category.py:12 products/models/product.py:22
+msgid "category"
+msgstr "Раздел"
+
+#: products/models/category.py:13
+msgid "categories"
+msgstr "Разделы"
+
+#: products/models/product.py:10
+msgid "price"
+msgstr "Цена"
+
+#: products/models/product.py:11
+msgid "discount"
+msgstr "Скидка"
+
+#: products/models/product.py:12
+msgid "status"
+msgstr "Статус"
+
+#: products/models/product.py:13
+msgid "materials"
+msgstr "Материалы"
+
+#: products/models/product.py:14
+msgid "color"
+msgstr "Цвет"
+
+#: products/models/product.py:15
+msgid "sizes"
+msgstr "Размеры"
+
+#: products/models/product.py:28
+msgid "product"
+msgstr "Продукт"
+
+#: products/models/product.py:29
+msgid "products"
+msgstr "Продукты"

@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -114,7 +115,13 @@ SIMPLE_JWT = {
 
 ROOT_URLCONF = 'web_svetpet.urls'
 
-LANGUAGE_CODE = os.getenv('DJANGO_LANGUAGE_CODE', 'en-us')
+# DEBUG
+# LANGUAGE_CODE = os.getenv('DJANGO_LANGUAGE_CODE', 'en-us')
+LANGUAGE_CODE = os.getenv('DJANGO_LANGUAGE_CODE', 'ru-ru')
+
+LOCALE_PATHS = (
+    BASE_DIR / 'locale/',
+)
 
 TIME_ZONE = os.getenv('DJANGO_TIME_ZONE', 'UTC')
 
