@@ -1,11 +1,10 @@
 import styles from './Footer.module.scss';
-import facebook from '../../assets/images/Facebook.svg';
-import instag from '../../assets/images/Instagram.svg';
-import whatsapp from '../../assets/images/WhatsApp.svg';
-
-import { API_URL } from '../../http';
-import { Link } from 'react-router-dom';
 import React, { useState, useContext, useEffect } from 'react';
+import facebook from 'assets/images/Facebook.svg';
+import instag from 'assets/images/Instagram.svg';
+import whatsapp from 'assets/images/WhatsApp.svg';
+import { API_URL } from 'http';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const [data, setData] = useState(null);
