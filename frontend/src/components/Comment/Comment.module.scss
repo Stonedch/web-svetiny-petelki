@@ -1,0 +1,45 @@
+@import 'index.scss';
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+
+    & > .top,
+    & > .body,
+    & > .bottom {
+        width: 100%;
+        margin-bottom: .5rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    & > .bottom {
+        margin: 0;
+    }
+
+    & .author {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $dark;
+        line-height: 1em;
+    }
+
+    & .message {
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgba($dark, .9);
+        line-height: 1.2em;
+    }
+
+    & .date {
+        font-size: .75;
+        font-weight: 600;
+        color: $dark;
+        line-height: 1em;
+    }
+}
+
