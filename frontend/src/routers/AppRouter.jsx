@@ -1,23 +1,24 @@
-import { Routes, Route, Redirect } from 'react-router-dom';
-import { Home } from 'views/Home';
-import { CategoriesVi } from 'views/CategoriesVi';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { HomeView } from 'views/HomeView';
+import { CategoriesVi } from 'views/CategoriesView';
 import { ProductsView } from 'views/ProductsView';
 import { routes } from 'constants';
-import { NotFond } from 'views/NotFond';
+import { NotFond } from 'views/NotFondView';
 
 const AppRouter = () => {
     return (
         <>
             <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path={routes.HOME} element={<Home />} />
-                <Route path={routes.CATEGORIES} element= {<CategoriesVi />} />
+                <Route path='/' element={<HomeView />} />
+                <Route path={routes.HOME} element={<HomeView />} />
+
+                <Route path={routes.CATEGORIES} element={<CategoriesVi />} />
                 <Route path={routes.PRODUCTS} element={<ProductsView />} />
-                <Route path={routes.NOTFOND} element={<NotFond/>} />
+                <Route path={routes.NOTFOND} element={<NotFond />} />
             </Routes>
         </>
     );
-}
+};
 
 export { AppRouter };
-
