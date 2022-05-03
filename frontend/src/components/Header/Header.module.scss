@@ -24,27 +24,6 @@
                 }
             }
 
-            & > .socials {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-
-                & > a {
-                    margin-right: 2rem;
-                    font-size: 2rem;
-                    color: $dark;
-                    transition: transform 0.3s ease-in-out;
-
-                    &:hover {
-                        transform: rotate(360deg);
-                    }
-
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-            }
-
             & > .brand {
                 display: flex;
                 justify-content: center;
