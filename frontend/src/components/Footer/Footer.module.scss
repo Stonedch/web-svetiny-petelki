@@ -2,14 +2,13 @@
 
 .footer {
     margin-top: auto;
-    padding: 2rem 0;
-    width: 100%;
     background-color: $dark;
 
     & > .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
 
         & > * {
             margin-bottom: 1rem;
@@ -18,57 +17,18 @@
                 margin-bottom: 0;
             }
         }
-    }
-}
 
-.lineBox {
-    display: flex;
-    justify-content: center;
+        & a {
+            color: $light;
+        }
 
-    & > .line {
-        width: 50%;
-        border-bottom: 0.1rem solid $light;
-    }
-}
+        & > .copyright {
+            font-size: 0.75rem;
+            text-decoration: none;
 
-.massageBox {
-    display: flex;
-    justify-content: center;
-
-    & > img {
-        width: 3rem;
-    }
-
-    & > * {
-        margin-right: 1rem;
-
-        &:last-child {
-            margin-right: 0rem;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
-
-.menu {
-    display: flex;
-    justify-content: center;
-
-    & > * {
-        margin-right: 1rem;
-
-        &:last-child {
-            margin-right: 0rem;
-        }
-    }
-
-    @media screen and (max-width: 899px) {
-        display: none;
-    }
-}
-
-.сopyright {
-    font-family: 'Ubuntu';
-    font-size: .75rem;
-    line-height: 1.25em;
-    text-align: center;
-}
-

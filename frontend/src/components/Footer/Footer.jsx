@@ -1,33 +1,19 @@
-import styles from './Footer.module.scss';
 import React from 'react';
-import facebook from 'assets/images/Facebook.svg';
-import instag from 'assets/images/Instagram.svg';
-import whatsapp from 'assets/images/WhatsApp.svg';
+import { Link } from 'react-router-dom';
+import styles from './Footer.module.scss';
+import { Navbar } from 'components/Header/Navbar';
 
 const Footer = () => {
-  return (
-    <div className={styles.footer}>
-        <div className={styles.content}>
-            <div className={styles.massageBox}>
-                <a href='#'><img src={facebook} /></a>
-                <a href='#'><img src={instag} /></a>
-                <a href='#'><img src={whatsapp} /></a>
+    return (
+        <div className={[styles.footer, styles.screen].join(' ')}>
+            <div className={styles.content}>
+                <Navbar />
+                <Link className={styles.copyright} to='/'>
+                    ©2022 Svetenpetelki. All rights reserved
+                </Link>
             </div>
-            <div className={styles.lineBox}>
-                <div className={styles.line}></div>
-            </div>
-            <div className={styles.menu}>
-                <a href="/home">Главная</a>
-                <a href="/categories"> Категории</a>
-                <a href='#'>Наборы</a>
-                <a href='#'>Именные игрушки</a>
-                <a href='#'>Контакты</a>
-            </div>
-            <a href='#' className={styles.сopyright}>©2022 Svetenpetelki. All rights reserved</a>
         </div>
-    </div>
-  );
+    );
 };
 
 export { Footer };
-
