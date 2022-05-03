@@ -1,90 +1,91 @@
 @import 'index.scss';
 
 .header {
-    position: relative;
-    z-index: 1;
-    min-height: 40rem;
-    display: flex;
-    background-color: $pink;
+    & > .content {
+        & > * {
+            margin-top: 2rem;
 
-    & > * {
-        position: relative;
-        z-index: 1;
-    }
+            &:first-child {
+                margin-top: 0;
+            }
+        }
 
-    &__par {
-        max-width: 30rem;
-        margin: { bottom: 1rem; }
-        font-size: 1.2rem;
-        line-height: 1.4;
-        color: $dark;
-        text-align: center;
+        & > .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-        &:last-child {
-            margin: { bottom: 0; }
+            & > * {
+                flex: 0 0 60%;
+
+                &:first-child,
+                &:last-child {
+                    flex: 0 0 20%;
+                }
+            }
+
+            & > .socials {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                & > a {
+                    margin-right: 2rem;
+                    font-size: 2rem;
+                    color: $dark;
+                    transition: transform 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: rotate(360deg);
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            & > .brand {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                cursor: pointer;
+
+                & > .logotype {
+                    margin-right: 2rem;
+                    width: 3rem;
+
+                    & > img {
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                & > .title {
+                    margin: 0;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $dark;
+                }
+            }
+
+            & > .tools {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                & > * {
+                    margin-right: 2rem;
+                    font-size: 1.25rem;
+                    color: $dark;
+                    cursor: pointer;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
         }
     }
-
-    @media screen and (max-width: 699px) {
-        padding: {
-            top: 1rem;
-            bottom: 1rem;
-        }
-    }
 }
-
-.content {
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    @media screen and (max-width: 699px) {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    &:first-child::before {
-        position: absolute;
-        top: 0; bottom: 0; left: 32%;
-        z-index: -1;
-        content: '';
-        width: 10rem;
-        background-color: $light;
-
-        @media screen and (max-width: 699px) {
-            display: none;
-        }
-    }
-}
-
-.image {
-    width: 25rem;
-
-    & > img {
-        width: 100%;
-        objecti-fit: contain;
-    }
-
-    @media screen and (max-width: 1279px) {
-        width: 80%
-    }
-
-    @media screen and (max-width: 699px) {
-        width: 40%;
-    }
-}
-
-h1 {
-    max-width: 30rem;
-    margin: { top: 0; bottom: 1rem; }
-    font-size: 3rem;
-    color: $dark;
-    text-align: center;
-}
-
