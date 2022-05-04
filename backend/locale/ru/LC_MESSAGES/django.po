@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-17 12:24+0000\n"
+"POT-Creation-Date: 2022-05-04 13:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,44 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: comments/models/comment.py:15
+msgid "author"
+msgstr "Автор"
+
+#: comments/models/comment.py:23 products/models/product.py:28
+msgid "product"
+msgstr "Продукт"
+
+#: comments/models/comment.py:25
+msgid "rating"
+msgstr "Рейтинг"
+
+#: comments/models/comment.py:26
+msgid "body"
+msgstr "Тело"
+
+#: comments/models/comment.py:27
+msgid "active"
+msgstr "Активность"
+
+#: comments/models/comment.py:28 products/models/category.py:8
+#: products/models/product.py:24
+msgid "created"
+msgstr "Добавлено"
+
+#: comments/models/comment.py:29 products/models/category.py:9
+#: products/models/product.py:25
+msgid "updated"
+msgstr "Последнее обновление"
+
+#: comments/models/comment.py:32
+msgid "comment"
+msgstr "Комментарий"
+
+#: comments/models/comment.py:33
+msgid "comments"
+msgstr "Комментарии"
+
 #: products/models/category.py:6 products/models/product.py:8
 msgid "name"
 msgstr "Название"
@@ -27,14 +65,6 @@ msgstr "Название"
 #: products/models/category.py:7 products/models/product.py:9
 msgid "picture"
 msgstr "Изображение"
-
-#: products/models/category.py:8 products/models/product.py:24
-msgid "created"
-msgstr "Добавлено"
-
-#: products/models/category.py:9 products/models/product.py:25
-msgid "updated"
-msgstr "Последнее обновление"
 
 #: products/models/category.py:12 products/models/product.py:22
 msgid "category"
@@ -67,10 +97,6 @@ msgstr "Цвет"
 #: products/models/product.py:15
 msgid "sizes"
 msgstr "Размеры"
-
-#: products/models/product.py:28
-msgid "product"
-msgstr "Продукт"
 
 #: products/models/product.py:29
 msgid "products"
