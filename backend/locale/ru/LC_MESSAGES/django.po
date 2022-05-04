@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-04 13:54+0000\n"
+"POT-Creation-Date: 2022-05-04 14:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,11 +42,13 @@ msgstr "Активность"
 
 #: comments/models/comment.py:28 products/models/category.py:8
 #: products/models/product.py:24 questions/models/question.py:8
+#: users/models/user.py:41
 msgid "created"
 msgstr "Добавлено"
 
 #: comments/models/comment.py:29 products/models/category.py:9
 #: products/models/product.py:25 questions/models/question.py:9
+#: users/models/user.py:42
 msgid "updated"
 msgstr "Последнее обновление"
 
@@ -145,3 +147,33 @@ msgstr "Социальная сеть"
 #: settings/models/social.py:21
 msgid "socials"
 msgstr "Социальные сети"
+
+#: users/models/user.py:37
+#, fuzzy
+#| msgid "name"
+msgid "username"
+msgstr "Имя пользователя"
+
+#: users/models/user.py:38
+msgid "email"
+msgstr "Электронная почта"
+
+#: users/models/user.py:39
+#, fuzzy
+#| msgid "active"
+msgid "is_active"
+msgstr "Активность"
+
+#: users/models/user.py:40
+msgid "is_staff"
+msgstr "Является привилегированным пользователем"
+
+#: users/models/user.py:50
+msgid "user"
+msgstr "Пользователь"
+
+#: users/models/user.py:51
+#, fuzzy
+#| msgid "user"
+msgid "users"
+msgstr "Пользователи"

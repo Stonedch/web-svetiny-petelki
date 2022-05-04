@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from django.utils.translation import gettext as _
 
 
 class UserManager(BaseUserManager):
@@ -33,17 +34,21 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(db_index=True, max_length=255, unique=True)
-    email = models.EmailField(db_index=True, unique=True,  null=True, blank=True)
-    is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+    username = models.CharField(db_index=True, max_length=255, unique=True, verbose_name=_('username'))
+    email = models.EmailField(db_index=True, unique=True,  null=True, blank=True, verbose_name=_('email'))
+    is_active = models.BooleanField(default=True, verbose_name=_('active'))
+    is_staff = models.BooleanField(default=False, verbose_name=_('is_staff'))
+    created = models.DateTimeField(auto_now_add=True, verbose_name=_('created'))
+    updated = models.DateTimeField(auto_now=True, verbose_name=_('updated'))
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 
     objects = UserManager()
+
+    class Meta:
+        verbose_name=_('user')
+        verbose_name_plural=_('users')
 
     def __str__(self):
         return f"{self.email}"
