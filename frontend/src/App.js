@@ -3,11 +3,7 @@ import { AppRouter } from './routers/AppRouter';
 import styles from './index.scss';
 
 function App() {
-
-    return (
-        <AppRouter />
-    );
+    return <AppRouter />;
 }
 
 export default App;
-
