@@ -15,3 +15,7 @@ $dark: #333;
         font-family: 'Ubuntu', 'Roboto', 'Droid Sans', sans-serif, system-ui;
     }
 }
+
+#root {
+    @apply flex flex-col h-screen;
+}
