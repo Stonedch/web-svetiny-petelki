@@ -1,7 +1,10 @@
 @import-normalize;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-$pink: #B498A7;
-$light: #D0CECF;
+$pink: #b498a7;
+$light: #d0cecf;
 $dark: #333;
 
 * {
@@ -47,4 +50,3 @@ code {
         bottom: 3rem;
     }
 }
-
