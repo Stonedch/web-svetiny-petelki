@@ -1,34 +1,15 @@
-@import 'index.scss';
-
 .footer {
-    margin-top: auto;
-    background-color: $dark;
+    @apply text-gray-600 bg-gray-100 py-6 mt-auto;
 
-    & > .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    & .content {
+        @apply container mx-auto flex flex-col sm:flex-row items-center;
+    }
 
-        & > * {
-            margin-bottom: 1rem;
+    & .copyright {
+        @apply text-sm sm:ml-6;
+    }
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        & a {
-            color: $light;
-        }
-
-        & > .copyright {
-            font-size: 0.75rem;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+    & .socials {
+        @apply sm:ml-auto mt-2 sm:mt-0;
     }
 }

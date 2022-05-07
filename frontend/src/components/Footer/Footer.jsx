@@ -1,18 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.scss';
-import { Navbar } from 'components/Header/Navbar';
+import { Brand } from 'components/Header/Brand';
+import { Created } from './Created';
 import { Socials } from 'components/Header/Socials';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
-        <div className={[styles.footer, styles.screen].join(' ')}>
+        <div className={styles.footer}>
             <div className={styles.content}>
-                <Socials />
-                <Navbar />
+                <Brand />
                 <Link className={styles.copyright} to='/'>
-                    ©2022 Svetenpetelki. All rights reserved
+                    © 2022 Светины Петельки
                 </Link>
+                <Socials className={styles.socials} />
+                <Created />
             </div>
         </div>
     );
