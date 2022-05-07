@@ -1,0 +1,23 @@
+.who {
+    @apply sm:w-1/5 text-center sm:py-8 sm:border-l border-gray-200 sm:pl-8;
+
+    .avatar {
+        @apply w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400;
+
+        & > * {
+            @apply w-10 h-10;
+        }
+    }
+
+    .body {
+        @apply flex flex-col items-center text-center justify-center;
+
+        & .title {
+            @apply font-medium mt-4 text-gray-900 text-lg;
+        }
+
+        & .line {
+            @apply w-12 h-1 bg-pink-300 rounded mt-2 mb-4;
+        }
+    }
+}
