@@ -1,0 +1,21 @@
+.brand {
+    @apply flex font-medium items-center text-gray-900 mb-4 md:mb-0;
+
+    &:hover {
+        & > .logotype {
+            @apply shadow-lg scale-110;
+        }
+    }
+
+    & > .logotype {
+        @apply w-12 h-12 rounded-full transition-all duration-300 ease-in-out;
+
+        & > img {
+            @apply w-full h-full object-contain;
+        }
+    }
+
+    & > .title {
+        @apply ml-3 text-xl;
+    }
+}
