@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './Socials.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVk, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faVk, faTelegram } from '@fortawesome/free-brands-svg-icons';
 
 const Socials = () => {
     return (
         <div className={styles.socials}>
-            <a href='#'>
+            <a className={styles.item} href='#'>
                 <FontAwesomeIcon icon={faVk} />
             </a>
-            <a href='#'>
-                <FontAwesomeIcon icon={faInstagram} />
+            <a className={styles.item} href='#'>
+                <FontAwesomeIcon icon={faTelegram} />
             </a>
         </div>
     );
