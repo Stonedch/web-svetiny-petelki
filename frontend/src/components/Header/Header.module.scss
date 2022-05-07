@@ -1,70 +1,7 @@
-@import 'index.scss';
-
 .header {
-    & > .content {
-        & > * {
-            margin-top: 2rem;
+    @apply text-gray-600;
 
-            &:first-child {
-                margin-top: 0;
-            }
-        }
-
-        & > .top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            & > * {
-                flex: 0 0 60%;
-
-                &:first-child,
-                &:last-child {
-                    flex: 0 0 20%;
-                }
-            }
-
-            & > .brand {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                cursor: pointer;
-
-                & > .logotype {
-                    margin-right: 2rem;
-                    width: 3rem;
-
-                    & > img {
-                        width: 100%;
-                        object-fit: contain;
-                    }
-                }
-
-                & > .title {
-                    margin: 0;
-                    font-size: 2rem;
-                    font-weight: 700;
-                    color: $dark;
-                }
-            }
-
-            & > .tools {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-
-                & > * {
-                    margin-right: 2rem;
-                    font-size: 1.25rem;
-                    color: $dark;
-                    cursor: pointer;
-
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
+    & .content {
+        @apply container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;
     }
 }
