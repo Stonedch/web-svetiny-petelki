@@ -13,11 +13,13 @@ const Navbar = () => {
     }, []);
 
     return navbar ? (
-        <div className={styles.navbar}>
+        <nav className={styles.navbar}>
             {navbar.map((item) => (
-                <Link to={item.url}>{item.name}</Link>
+                <Link className={styles.item} to={item.url}>
+                    {item.name}
+                </Link>
             ))}
-        </div>
+        </nav>
     ) : null;
 };
 

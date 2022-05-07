@@ -1,24 +1,7 @@
-@import 'index.scss';
-
 .navbar {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @apply md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center;
 
-    & > * {
-        position: relative;
-        margin-right: 2rem;
-        font-size: 1.25rem;
-        font-weight: 500;
-        color: $dark;
-        text-decoration: none;
-
-        &:last-child {
-            margin-right: 0;
-        }
-        
-        &:hover {
-            text-decoration: underline;
-        }
+    & > .item {
+        @apply mr-5 hover:text-gray-900;
     }
 }
