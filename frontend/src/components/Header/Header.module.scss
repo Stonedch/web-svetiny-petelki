@@ -1,7 +1,7 @@
 .header {
-    @apply text-gray-600;
+    @apply text-gray-600 py-8 px-5;
 
     & .content {
-        @apply container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;
+        @apply container mx-auto flex flex-wrap flex-col md:flex-row items-center;
     }
 }
