@@ -1,0 +1,17 @@
+.group {
+    & .summary {
+        @apply flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50;
+
+        & .title {
+            @apply font-medium text-gray-900;
+        }
+
+        & .icon {
+            @apply flex-shrink-0 ml-1.5 w-5 h-5 transition duration-300 text-xs text-pink-300;
+        }
+    }
+
+    & .body {
+        @apply px-4 mt-4 leading-relaxed text-gray-700;
+    }
+}

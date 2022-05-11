@@ -1,2 +1,0 @@
-export { QA } from './QA';
-
