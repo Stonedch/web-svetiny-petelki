@@ -5,12 +5,14 @@ import { Comments } from 'components/sections/Comments';
 import { Feedback } from 'components/sections/Feedback';
 import { Title } from 'components/sections/Title';
 import { Questions } from 'components/sections/Questions';
+import { Categories } from 'components/sections/Categories';
 
 const HomeView = () => {
     return (
         <Layout>
             <Title />
             <About />
+            <Categories />
             <Comments />
             <Questions />
             <Feedback />
