@@ -1,14 +1,20 @@
-import os
 from pathlib import Path
 from datetime import timedelta
+from django import conf
+
+from dotenv import dotenv_values
+
+config = {**dotenv_values()}
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-)8_4z5z$z9wowp2u#a&y%ds9or0n32t=1g^(15aoq+z^jsq3o^'
+SECRET_KEY = config['SECRET_KEY']
 
-DEBUG = True
+DEBUG = config['DEBUG'].lower() in ('true', '1', 't', 'y')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = config['ALLOWED_HOSTS'].split(' ')
+
+print(ALLOWED_HOSTS)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -87,8 +93,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.User'
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = config['CORS_ALLOW_ALL_ORIGINS'].lower() in (
+    'true', '1', 't', 'y')
+
+CORS_ALLOW_CREDENTIALS = config['CORS_ALLOW_CREDENTIALS'].lower() in (
+    'true', '1', 't', 'y')
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
@@ -117,21 +126,19 @@ SIMPLE_JWT = {
 
 ROOT_URLCONF = 'web_svetpet.urls'
 
-# DEBUG
-# LANGUAGE_CODE = os.getenv('DJANGO_LANGUAGE_CODE', 'en-us')
-LANGUAGE_CODE = os.getenv('DJANGO_LANGUAGE_CODE', 'ru-ru')
+LANGUAGE_CODE = config['LANGUAGE_CODE']
 
 LOCALE_PATHS = (
     BASE_DIR / 'locale/',
 )
 
-TIME_ZONE = os.getenv('DJANGO_TIME_ZONE', 'UTC')
+USE_I18N = config['USE_I18N'].lower() in ('true', '1', 't', 'y')
 
-USE_I18N = True
+USE_L10N = config['USE_L10N'].lower() in ('true', '1', 't', 'y')
 
-USE_L10N = True
+USE_TZ = config['USE_TZ'].lower() in ('true', '1', 't', 'y')
 
-USE_TZ = True
+TIME_ZONE = config['TIME_ZONE']
 
 STATIC_ROOT = BASE_DIR / '.static/'
 
@@ -142,4 +149,3 @@ MEDIA_ROOT = BASE_DIR / '.media/'
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
