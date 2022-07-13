@@ -14,7 +14,6 @@ DEBUG = config['DEBUG'].lower() in ('true', '1', 't', 'y')
 
 ALLOWED_HOSTS = config['ALLOWED_HOSTS'].split(' ')
 
-print(ALLOWED_HOSTS)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
