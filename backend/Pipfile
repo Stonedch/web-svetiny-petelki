@@ -11,6 +11,7 @@ djangorestframework-simplejwt = "*"
 pillow = "*"
 django-filter = "*"
 drf-yasg = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

@@ -1,6 +1,5 @@
 from pathlib import Path
 from datetime import timedelta
-from django import conf
 
 from dotenv import dotenv_values
 
@@ -92,11 +91,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = 'users.User'
 
-CORS_ALLOW_ALL_ORIGINS = config['CORS_ALLOW_ALL_ORIGINS'].lower() in (
-    'true', '1', 't', 'y')
+CORS_ALLOW_ALL_ORIGINS = config['CORS_ALLOW_ALL_ORIGINS'].lower() in ('true', '1', 't', 'y')
 
-CORS_ALLOW_CREDENTIALS = config['CORS_ALLOW_CREDENTIALS'].lower() in (
-    'true', '1', 't', 'y')
+CORS_ALLOW_CREDENTIALS = config['CORS_ALLOW_CREDENTIALS'].lower() in ('true', '1', 't', 'y')
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
